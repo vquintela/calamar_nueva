@@ -1,0 +1,424 @@
+$primary-color: black;
+$sec-color: white;
+
+@font-face {
+    font-family: "rock";
+    src: url(../fonts/RockwellStd.otf);
+}
+
+@font-face {
+    font-family: "futura";
+    src: url(../fonts/FuturaStd-Condensed.otf);
+}
+
+// Navbar
+nav {
+    font-family: "rock";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    z-index: 100;
+    transition: background-color 0.5s;
+    .nav-logo {
+        margin-left: 30px;
+        width: 100px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .texto {
+        text-align: center;
+        margin-left: 20px;
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        p {
+            margin: 0;
+            text-transform: uppercase;  
+            font-size: 1.2rem;     
+            letter-spacing: 0.15em;
+        }
+    }
+    .link {
+        margin-left: auto;
+        padding-right: 30px;
+        display: flex;
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding-top: 8px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 50%;
+            letter-spacing: 0.12em;
+        }
+    }
+    .link-item {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        margin: 0 30px;
+    }
+    .link-item::before, 
+    .link-item::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $primary-color;
+        transition: transform 0.5s;
+    }
+    .link-item::before {
+        transform: translateX(-101%);
+    }
+    .link-item::after {
+        transform: translateX(101%);
+    }
+    .link-item:hover::before,
+    .link-item:hover::after {
+        transform: translateX(0);
+    }
+}
+
+.bg {
+    background-color:rgba($color: #ffffff, $alpha: 0.8);
+    z-index: 200;
+}
+
+//img fondo
+.img-fondo {
+    position: absolute;
+    opacity: 0.3;
+    max-width: 100%;
+    top: 0;
+    transform: translateX(-40%);
+}
+
+.img-fondo2 {
+    position: absolute;
+    opacity: 0.2;
+    width: 30%;
+    top: 80%;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.img-fondo3 {
+    position: absolute;
+    opacity: 0.2;
+    width: 80%;
+    bottom: 50%;
+    left: 0;
+    transform: translateX(80%);
+}
+
+// btn-whatsapp
+.logo,
+.logo-borde,
+.logo-centro {
+    z-index: 110;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: fixed;
+    bottom: 70px;
+    right: 30px; 
+    transition: background-color 2s;
+    width: 70px;
+    height: 70px;
+    background-color: $primary-color;
+    .logo-borde {
+        transition: background-color 2s;
+        width: 85%;
+        height: 85%;
+        background-color: $sec-color;
+        .logo-centro {
+            transition: background-color 2s;
+            width: 85%;
+            height: 85%;
+            background-color: $primary-color;
+            i {
+                font-size: 2rem;
+                color: $sec-color;
+            }
+        }
+    }
+}
+
+.logo:hover {
+    cursor: pointer;
+    background-color: $sec-color;
+    .logo-borde {
+        background-color: $primary-color;
+        .logo-centro {
+            background-color: $sec-color;
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.contenedor {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    .img-back {
+        position: relative;
+        img {
+            position: absolute;
+            opacity: 0.2;
+            width: 80%;
+            top: -300px;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// Encabezado
+.masthead {
+    font-family: "futura";
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    z-index: 10;
+    .text-portada {
+        text-align: center;
+        h1, h2, h3 {
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 5rem;
+            margin: 0;
+            font-weight: lighter;
+            strong {
+                font-weight: bold;
+            }
+        }
+        h3 {
+            font-size: 4rem;
+            font-style: italic;
+            font-weight: lighter;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 5rem;
+            margin: 0;
+        }
+    }
+    .text-portada::before, 
+    .text-portada::after {
+        content: "";
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 2px;
+        background-color: $primary-color;
+        margin: 10px 0;
+    }
+}
+
+//servicios y trabajos
+.title-servicios {
+    font-family: "rock";
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+}
+
+.title-servicios::after,
+.title-servicios::before {
+    content: '~';
+    margin: 0 30px;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.column-servicios,
+.img-trabajos {
+    z-index: 100;
+    font-family: "futura";
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: center;
+}
+
+.column-servicios {
+    .col {
+        border-radius: 50px;
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6rem;
+            margin: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.img-trabajos {
+    .col-img {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+        .img-col {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 0.5s;
+            img {
+                max-width: 100%;
+            }
+        }
+        .text-col {
+            position: absolute;
+            width: 90%;
+            z-index: 10;
+            transform: translateY(-110%);
+            transition: transform 0.5s;
+        }
+    }
+    .col-img:hover {
+        .text-col {
+            transform: translateY(0);
+        }
+        .img-col {
+            opacity: 0.3;
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    background-color: $primary-color;
+    .navegacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'rock';
+        .nav-logo {
+            width: 20%;
+            img {
+                max-width: 100%;
+            }
+        }
+        .texto {
+            color: $sec-color;
+            text-transform: uppercase;
+            h1, p {
+                letter-spacing: 0.15em;
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+    .redes {
+        font-family: 'rock';
+        text-align: center;
+        .title-redes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            color: $sec-color;
+            letter-spacing: 0.15em;
+        }
+        .title-redes::after,
+        .title-redes::before {
+            content: '~';
+            font-size: 2rem;
+            margin: 0 10px;
+        }
+        .icon-redes {
+            a {
+                text-decoration: none;
+                color: $sec-color;
+                i {
+                    font-size: 2rem;
+                    padding: 15px 15px;
+                }
+            }
+        }
+    }
+    .contacto {
+        margin: 50px 0;
+        .text-contacto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-family: 'rock';
+            color: $sec-color;
+            letter-spacing: 0.15em;
+        }
+        .text-contacto::before,
+        .text-contacto::after {
+            content: '~';
+            font-size: 2rem;
+            margin: 0 10px;
+        }
+        form {
+            .input-form {
+                margin: 15px 0;
+                input {
+                    font-family: 'futura';
+                    width: 100%;
+                    padding: 5px 0;
+                }
+            }
+            button {
+                display: flex;
+                margin-left: auto;
+                font-family: 'futura';
+                padding: 8px 35px;
+                background-color: $sec-color;
+                border: none;
+                border-radius: 20px;
+            }
+        }
+    }
+}
