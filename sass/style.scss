@@ -11,6 +11,66 @@ $sec-color: white;
     src: url(../fonts/FuturaStd-Condensed.otf);
 }
 
+//modal
+.mascara {
+    display: none; 
+    position: fixed; 
+    z-index: 50000; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0,0,0,0.8); 
+    .contenido {
+        animation: modal 1s;
+        position: fixed;
+        top: 15vh;
+        left: 10vw;
+        right: 10vw;
+        margin: auto;
+        font-family: 'futura';
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: auto;
+        max-width: 450px;
+        .modal-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                margin-right: auto;
+            }
+            img {
+                margin-right: auto;
+                max-width: 10%;
+            }
+        }
+        .modal-footer {
+            p {
+                text-align: center;
+            }
+        }
+        button {
+            display: flex;
+            margin-left: auto;
+            font-family: 'futura';
+            padding: 8px 35px;
+            background-color: $primary-color;
+            color: $sec-color;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+    @keyframes modal {
+        0% {
+            transform: translateY(-150%);
+        }
+    }
+}
+
 // Navbar
 .menu-btn {
     cursor: pointer;
@@ -241,23 +301,23 @@ body {
         }
         @keyframes girar {
             0% {
-                transform: scale(2) translateX(50%);
+                transform: scale(2) translateX(70%);
             }
             20% {
-                transform: scale(2) translateX(50%);
+                transform: scale(2) translateX(70%);
             }
             50% {
-                transform: scale(2) translate(0);
+                transform: scale(1) translate(150%);
             }
             100% {
-                transform: scale(1);
+                transform: scale(1) translate(0);
             }
         }
     }
     .texto {
         font-family: 'rock';
         margin-left: 15px;
-        animation: initext 5s;
+        animation: initext 6s;
         h1, p {
             margin: 0;
             text-align: center;
@@ -273,7 +333,7 @@ body {
             0% {
                 opacity: 0;
             }
-            50% {
+            60% {
                 opacity: 0;
             }
         }
@@ -470,6 +530,11 @@ footer {
                 background-color: $sec-color;
                 border: none;
                 border-radius: 20px;
+                cursor: pointer;
+            }
+            span {
+                color: red;
+                font-family: 'futura';
             }
         }
     }

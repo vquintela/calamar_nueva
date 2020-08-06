@@ -8,6 +8,87 @@
   src: url(../fonts/FuturaStd-Condensed.otf);
 }
 
+.mascara {
+  display: none;
+  position: fixed;
+  z-index: 50000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.mascara .contenido {
+  -webkit-animation: modal 1s;
+          animation: modal 1s;
+  position: fixed;
+  top: 15vh;
+  left: 10vw;
+  right: 10vw;
+  margin: auto;
+  font-family: 'futura';
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: auto;
+  max-width: 450px;
+}
+
+.mascara .contenido .modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mascara .contenido .modal-title h3 {
+  margin-right: auto;
+}
+
+.mascara .contenido .modal-title img {
+  margin-right: auto;
+  max-width: 10%;
+}
+
+.mascara .contenido .modal-footer p {
+  text-align: center;
+}
+
+.mascara .contenido button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  font-family: 'futura';
+  padding: 8px 35px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes modal {
+  0% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+}
+
+@keyframes modal {
+  0% {
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+  }
+}
+
 .menu-btn {
   cursor: pointer;
   position: absolute;
@@ -320,47 +401,47 @@ body {
 
 @-webkit-keyframes girar {
   0% {
-    -webkit-transform: scale(2) translateX(50%);
-            transform: scale(2) translateX(50%);
+    -webkit-transform: scale(2) translateX(70%);
+            transform: scale(2) translateX(70%);
   }
   20% {
-    -webkit-transform: scale(2) translateX(50%);
-            transform: scale(2) translateX(50%);
+    -webkit-transform: scale(2) translateX(70%);
+            transform: scale(2) translateX(70%);
   }
   50% {
-    -webkit-transform: scale(2) translate(0);
-            transform: scale(2) translate(0);
+    -webkit-transform: scale(1) translate(150%);
+            transform: scale(1) translate(150%);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
   }
 }
 
 @keyframes girar {
   0% {
-    -webkit-transform: scale(2) translateX(50%);
-            transform: scale(2) translateX(50%);
+    -webkit-transform: scale(2) translateX(70%);
+            transform: scale(2) translateX(70%);
   }
   20% {
-    -webkit-transform: scale(2) translateX(50%);
-            transform: scale(2) translateX(50%);
+    -webkit-transform: scale(2) translateX(70%);
+            transform: scale(2) translateX(70%);
   }
   50% {
-    -webkit-transform: scale(2) translate(0);
-            transform: scale(2) translate(0);
+    -webkit-transform: scale(1) translate(150%);
+            transform: scale(1) translate(150%);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(0);
+            transform: scale(1) translate(0);
   }
 }
 
 .masthead .texto {
   font-family: 'rock';
   margin-left: 15px;
-  -webkit-animation: initext 5s;
-          animation: initext 5s;
+  -webkit-animation: initext 6s;
+          animation: initext 6s;
 }
 
 .masthead .texto h1, .masthead .texto p {
@@ -380,7 +461,7 @@ body {
   0% {
     opacity: 0;
   }
-  50% {
+  60% {
     opacity: 0;
   }
 }
@@ -389,7 +470,7 @@ body {
   0% {
     opacity: 0;
   }
-  50% {
+  60% {
     opacity: 0;
   }
 }
@@ -662,6 +743,12 @@ footer .contacto form button {
   background-color: white;
   border: none;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+footer .contacto form span {
+  color: red;
+  font-family: 'futura';
 }
 
 @media screen and (max-width: 850px) {

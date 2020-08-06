@@ -11,10 +11,30 @@
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>~ Calamar En Su Tinta ~</title>
 </head>
-<body>
+<body id="inicio">
     <img class="img-fondo" src="img/calamar-logo.png" alt="logo">
     <img class="img-fondo2" src="img/calamar-logo.png" alt="logo">
     <img class="img-fondo3" src="img/calamar-logo.png" alt="logo">
+    <div id="lamascara" class="mascara">
+        <div class="contenido">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <img src="img/calamar-logo.png" alt="lg">
+                    <h3>~ Consulta Enviada Correctamente ~</h3>
+                </div>
+                <div class="modal-body">
+                    <hr>
+                    <p>En breve nos comunicaremos con usted</p>
+                    <p>¡Muchas Gracias!</p>
+                </div>
+                <div class="modal-footer">
+                    <p>~ Calamar En Su Tinta ~</p>
+                    <hr>
+                    <button type="button" class="btn btn-primary" id="aceptarEditarButton">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <nav>
         <div class="menu-btn" id="btn-menu">
             <i class="fas fa-bars fa-2x"></i>
@@ -30,20 +50,22 @@
         </div>
         <div class="link" id="nav-navbar">
             <div class="link-item">
-                <a href="#">Inicio</a>
+                <a href="#inicio">Inicio</a>
             </div>
             <div class="link-item">
-                <a href="#">Servicios</a>
+                <a href="#servicios">Servicios</a>
             </div>
             <div class="link-item">
-                <a href="#">Trabajos</a>
+                <a href="#trabajos">Trabajos</a>
             </div>
         </div>
     </nav>
     <div class="logo">
         <div class="logo-borde">
             <div class="logo-centro">
-                <i class="fab fa-whatsapp"></i>
+                <a id="btn-ws">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
     </div>
@@ -59,7 +81,7 @@
                 <p>~ en su tinta ~</p>
             </div>
         </div>
-        <div class="title-servicios">
+        <div class="title-servicios" id="servicios">
             <h1>servicios</h1>
         </div>
         <div class="column-servicios">
@@ -121,7 +143,7 @@
         <div class="img-back">
             <img src="img/calamar-logo.png" alt="logo">
         </div>
-        <div class="title-servicios">
+        <div class="title-servicios" id="trabajos">
             <h1>trabajos</h1>
         </div>
         <div class="img-trabajos">
@@ -202,10 +224,10 @@
                 <h1>redes</h1>
             </div>
             <div class="icon-redes">
-                <a href="">
+                <a href="https://www.facebook.com/CalamarEnSuTintaAr" target="_blank">
                     <i class="fab fa-facebook-square"></i>
                 </a>
-                <a href="">
+                <a href="https://www.instagram.com/calamarensutintaar/" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -217,17 +239,21 @@
             <form action="">
                 <div class="input-form">
                     <input type="text" id="nombre" placeholder="Nombre">
+                    <span id="errorNombre"></span>
                 </div>
                 <div class="input-form">
-                    <input type="text" id="celular" placeholder="Celular">
+                    <input type="number" id="celular" placeholder="Celular">
+                    <span id="errorTelefono"></span>
                 </div>
                 <div class="input-form">
-                    <input type="text" id="correo" placeholder="Correo">
+                    <input type="email" id="correo" placeholder="Correo">
+                    <span id="errorEmail"></span>
                 </div>
                 <div class="input-form">
-                    <input type="text" id="mensaje" placeholder="Mensaje">
+                    <input type="textarea" id="mensaje" placeholder="Mensaje">
+                    <span id="errorComentario"></span>
                 </div>
-                <button type="button" id="consulta">Consultar</button>
+                <button type="submit" id="consulta">Consultar</button>
             </form>
         </div>
     </footer>
