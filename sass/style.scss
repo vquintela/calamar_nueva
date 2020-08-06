@@ -12,6 +12,16 @@ $sec-color: white;
 }
 
 // Navbar
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 32px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+    color: $primary-color;
+}
+
 nav {
     font-family: "rock";
     position: fixed;
@@ -23,6 +33,10 @@ nav {
     align-items: center;
     z-index: 100;
     transition: background-color 0.5s;
+    .nav-logos {
+        display: flex;
+        align-items: center;
+    }
     .nav-logo {
         margin-left: 30px;
         width: 100px;
@@ -195,46 +209,74 @@ body {
 
 // Encabezado
 .masthead {
-    font-family: "futura";
     width: 100%;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    .text-portada {
-        text-align: center;
-        h1, h2, h3 {
+    .logo-inicio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background-color: $primary-color;
+        animation: girar 5s;
+        .inicio-borde {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 85%;
+            height: 85%;
+            background-color: $sec-color;
+            .inicio-centro {
+                border-radius: 50%;
+                width: 85%;
+                height: 85%;
+                background-color: $primary-color;
+            }
+        }
+        @keyframes girar {
+            0% {
+                transform: scale(2) translateX(50%);
+            }
+            20% {
+                transform: scale(2) translateX(50%);
+            }
+            50% {
+                transform: scale(2) translate(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    }
+    .texto {
+        font-family: 'rock';
+        margin-left: 15px;
+        animation: initext 5s;
+        h1, p {
+            margin: 0;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 0.15rem;
             text-transform: uppercase;
         }
         h1 {
-            font-size: 5rem;
-            margin: 0;
-            font-weight: lighter;
-            strong {
-                font-weight: bold;
+            font-size: 4rem;
+            letter-spacing: 0.6rem;
+        }
+        @keyframes initext {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
             }
         }
-        h3 {
-            font-size: 4rem;
-            font-style: italic;
-            font-weight: lighter;
-            margin: 10px 0;
-        }
-        h2 {
-            font-size: 5rem;
-            margin: 0;
-        }
-    }
-    .text-portada::before, 
-    .text-portada::after {
-        content: "";
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 2px;
-        background-color: $primary-color;
-        margin: 10px 0;
     }
 }
 
@@ -329,7 +371,7 @@ body {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     align-items: center;
     width: 100%;
@@ -337,28 +379,34 @@ footer {
     background-color: $primary-color;
     .navegacion {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         font-family: 'rock';
-        .nav-logo {
-            width: 20%;
-            img {
-                max-width: 100%;
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            .nav-logo {
+                width: 20%;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .texto {
+                color: $sec-color;
+                text-transform: uppercase;
+                h1, p {
+                    letter-spacing: 0.15em;
+                    margin: 0;
+                    text-align: center;
+                }
+                p {
+                    font-size: 1.2rem;
+                }
             }
         }
-        .texto {
-            color: $sec-color;
-            text-transform: uppercase;
-            h1, p {
-                letter-spacing: 0.15em;
-                margin: 0;
-                text-align: center;
-            }
-        }
-    }
-    .redes {
-        font-family: 'rock';
-        text-align: center;
         .title-redes {
             display: flex;
             justify-content: center;
@@ -366,6 +414,9 @@ footer {
             text-transform: uppercase;
             color: $sec-color;
             letter-spacing: 0.15em;
+            h1 {
+                margin: 0;
+            }
         }
         .title-redes::after,
         .title-redes::before {
@@ -379,13 +430,14 @@ footer {
                 color: $sec-color;
                 i {
                     font-size: 2rem;
-                    padding: 15px 15px;
+                    padding: 5px 15px;
                 }
             }
         }
     }
     .contacto {
         margin: 50px 0;
+        width: 80%;
         .text-contacto {
             display: flex;
             justify-content: center;
@@ -420,5 +472,113 @@ footer {
                 border-radius: 20px;
             }
         }
+    }
+}
+
+@media screen and (max-width:850px){
+    .menu-btn {
+        display: block;
+    }
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
+    nav {
+        display: block;
+        text-align: start;
+        .link {
+            display: block;
+            width: 50%;
+            height: 100vh;
+            margin-left: 0;
+            border-right: 1px solid $primary-color;
+            padding-top: 20px;
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+            transform: translateX(-110%);
+            transition: transform 0.5s;
+        }
+        .link-item {
+            width: 70%;
+            display: block;
+            margin: 20px 50px;
+            border-bottom: 1px solid $primary-color;
+            a {
+                display: block;
+                padding-bottom: 20px;
+            }
+        }
+        .link-item::before,
+        .link-item::after {
+            display: none;
+        }
+        .show {
+            transform: translateX(0);
+        }
+    }
+    .column-servicios,
+    .img-trabajos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:650px){
+    .masthead {
+        .logo-inicio {
+            width: 100px;
+            height: 100px;
+        }
+        .texto {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .column-servicios,
+    .img-trabajos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+        .navegacion {
+            margin-top: 50px;
+        }
+        .contacto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    nav {
+        .menu-btn {
+            top: 20px;
+        }
+        .nav-logo {
+            margin-left: 5px;
+            width: 80px;
+        }
+        .texto {
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+        }
+        .link-item {
+            margin-left: 10px;
+        }
+    }
+    .title-servicios {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .title-servicios::after,
+    .title-servicios::before {
+        font-size: 3rem;
     }
 }
