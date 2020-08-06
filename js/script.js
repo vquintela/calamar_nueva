@@ -115,3 +115,12 @@ const modalEd = () => {
     let mascara = document.getElementById('lamascara');
     mascara.style.display = "block";
 }
+
+// GALERIA
+document.getElementById('gal').addEventListener('click', e => {
+    if(!e.target.classList.contains('imgAct') && e.target.classList.contains('sec')) {
+        document.querySelector('.imgAct').classList.remove('imgAct')
+        e.target.classList.add('imgAct');
+        document.getElementById('imgActual').src = e.target.src;
+    }
+})

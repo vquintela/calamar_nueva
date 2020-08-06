@@ -417,6 +417,15 @@ body {
             z-index: 10;
             transform: translateY(-110%);
             transition: transform 0.5s;
+            a {
+                text-decoration: none;
+                padding: 8px 35px;
+                background-color: $primary-color;
+                color: $sec-color;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
         }
     }
     .col-img:hover {
