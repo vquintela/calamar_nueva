@@ -717,8 +717,8 @@ footer .contacto form button {
 
 @media screen and (max-width: 650px) {
   .masthead .logo-inicio {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   .masthead .texto h1 {
     font-size: 2rem;
