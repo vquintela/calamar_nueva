@@ -741,7 +741,7 @@ footer .contacto form .input-form {
 footer .contacto form .input-form input {
   font-family: 'futura';
   width: 100%;
-  padding: 8px 15px;
+  padding: 8px 0;
   border-radius: 6px;
   border: none;
 }
