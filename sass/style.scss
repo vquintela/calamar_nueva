@@ -621,12 +621,14 @@ footer {
     }
     footer {
         grid-template-columns: repeat(1, 1fr);
+        gap: 0;
         .navegacion {
             margin-top: 50px;
         }
         .contacto {
             margin-left: auto;
             margin-right: auto;
+            align-items: flex-start;
         }
     }
 }
