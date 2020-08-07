@@ -20,6 +20,7 @@
 }
 
 .mascara .contenido {
+  border-radius: 10px;
   -webkit-animation: modal 1s;
           animation: modal 1s;
   position: fixed;
@@ -40,24 +41,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .mascara .contenido .modal-title h3 {
-  margin-right: auto;
+  padding-left: 10px;
 }
 
 .mascara .contenido .modal-title img {
-  margin-right: auto;
   max-width: 10%;
 }
 
-.mascara .contenido .modal-footer p {
+.mascara .contenido .modal-body p {
+  font-size: 1.2rem;
+}
+
+.mascara .contenido .modal-footer h3 {
   text-align: center;
 }
 
@@ -740,7 +741,9 @@ footer .contacto form .input-form {
 footer .contacto form .input-form input {
   font-family: 'futura';
   width: 100%;
-  padding: 5px 0;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
 }
 
 footer .contacto form button {

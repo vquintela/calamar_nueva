@@ -22,6 +22,7 @@ $sec-color: white;
     height: 100vh; 
     background-color: rgba(0,0,0,0.8); 
     .contenido {
+        border-radius: 10px;
         animation: modal 1s;
         position: fixed;
         top: 15vh;
@@ -37,18 +38,21 @@ $sec-color: white;
         max-width: 450px;
         .modal-title {
             display: flex;
-            justify-content: center;
             align-items: center;
             h3 {
-                margin-right: auto;
+                padding-left: 10px;
             }
             img {
-                margin-right: auto;
                 max-width: 10%;
             }
         }
-        .modal-footer {
+        .modal-body {
             p {
+                font-size: 1.2rem;
+            }
+        }
+        .modal-footer {
+            h3 {
                 text-align: center;
             }
         }
@@ -528,7 +532,9 @@ footer {
                 input {
                     font-family: 'futura';
                     width: 100%;
-                    padding: 5px 0;
+                    padding: 8px 15px;
+                    border-radius: 6px;
+                    border: none;
                 }
             }
             button {
