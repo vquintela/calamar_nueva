@@ -265,7 +265,7 @@ nav .link-item:hover::after {
 
 .logo {
   position: fixed;
-  bottom: 70px;
+  bottom: 30px;
   right: 30px;
   -webkit-transition: background-color 2s;
   transition: background-color 2s;
@@ -776,12 +776,15 @@ footer .contacto form span {
     text-align: start;
   }
   nav .link {
+    position: absolute;
+    top: 100px;
+    left: 0;
     display: block;
     width: 50%;
     height: 100vh;
     margin-left: 0;
+    padding-top: 2px;
     border-right: 1px solid black;
-    padding-top: 20px;
     background-color: rgba(255, 255, 255, 0.5);
     -webkit-transform: translateX(-110%);
             transform: translateX(-110%);

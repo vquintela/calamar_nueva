@@ -209,7 +209,7 @@ nav {
 
 .logo {
     position: fixed;
-    bottom: 70px;
+    bottom: 30px;
     right: 30px; 
     transition: background-color 2s;
     width: 70px;
@@ -566,12 +566,15 @@ footer {
         display: block;
         text-align: start;
         .link {
+            position: absolute;
+            top: 100px;
+            left: 0;
             display: block;
             width: 50%;
             height: 100vh;
             margin-left: 0;
+            padding-top: 2px;
             border-right: 1px solid $primary-color;
-            padding-top: 20px;
             background-color: rgba($color: #ffffff, $alpha: 0.5);
             transform: translateX(-110%);
             transition: transform 0.5s;
