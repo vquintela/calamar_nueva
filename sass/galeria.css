@@ -927,6 +927,7 @@ footer .contacto form span {
 
 .contenedor-galeria .gal-img .gal-sec img {
   max-width: 50%;
+  cursor: pointer;
 }
 
 .contenedor-galeria .gal-img .imgAct {
