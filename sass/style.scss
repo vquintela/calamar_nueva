@@ -165,7 +165,7 @@ nav {
 }
 
 .bg {
-    background-color:rgba($color: #ffffff, $alpha: 0.8);
+    background-color:rgba($color: #ffffff, $alpha: 0.9);
     z-index: 200;
 }
 
@@ -575,7 +575,7 @@ footer {
             margin-left: 0;
             padding-top: 2px;
             border-right: 1px solid $primary-color;
-            background-color: rgba($color: #ffffff, $alpha: 0.5);
+            background-color: rgba($color: #ffffff, $alpha: 0.9);
             transform: translateX(-110%);
             transition: transform 0.5s;
         }
