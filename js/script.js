@@ -1,3 +1,4 @@
+// NAVBAR Scroll
 document.addEventListener('scroll', e => {
     const scroll = window.scrollY;
     const nav = document.querySelector('nav');
@@ -8,10 +9,12 @@ document.addEventListener('scroll', e => {
     }
 })
 
+// BOTON NAVABAR RESPONSIVE
 document.getElementById("btn-menu").addEventListener("click", () => {
     document.getElementById("nav-navbar").classList.toggle("show");
 });
 
+// CHEQUEO NAVEGADOR INSERTA URL WHATSAPP
 window.onload = () => {
     let check = false;
     (a => {
@@ -29,6 +32,7 @@ window.onload = () => {
     check ? aref.setAttribute('href', "https://api.whatsapp.com/send?phone=+549116286-6910") : aref.setAttribute('href', "https://web.whatsapp.com/send?phone=+549116286-6910")
 };
 
+// LOGICA FORM CONTACTO
 document.getElementById('consulta').addEventListener('click', e => {
     e.preventDefault()
     const nombre = document.getElementById('nombre').value;
@@ -124,3 +128,19 @@ document.getElementById('gal').addEventListener('click', e => {
         document.getElementById('imgActual').src = e.target.src;
     }
 })
+
+// SCROLL REVEAL
+const servicios = document.getElementById('servicios');
+const col = document.querySelectorAll('.col');
+ScrollReveal().reveal(servicios, {
+    delay: 500,
+    duration: 1000,
+    easing: 'ease-in',
+    reset: true
+});
+ScrollReveal().reveal(col, {
+    delay: 500,
+    duration: 500,
+    easing: 'ease-in',
+    reset: true
+});
