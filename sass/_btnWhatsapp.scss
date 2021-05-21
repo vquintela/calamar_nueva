@@ -1,0 +1,50 @@
+// btn-whatsapp
+.logo,
+.logo-borde,
+.logo-centro {
+    z-index: 110;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; 
+    transition: background-color 2s;
+    width: 70px;
+    height: 70px;
+    background-color: $primary-color;
+    .logo-borde {
+        transition: background-color 2s;
+        width: 85%;
+        height: 85%;
+        background-color: $sec-color;
+        .logo-centro {
+            transition: background-color 2s;
+            width: 85%;
+            height: 85%;
+            background-color: $primary-color;
+            i {
+                font-size: 2rem;
+                color: $sec-color;
+            }
+        }
+    }
+}
+
+.logo:hover {
+    cursor: pointer;
+    background-color: $sec-color;
+    .logo-borde {
+        background-color: $primary-color;
+        .logo-centro {
+            background-color: $sec-color;
+            i {
+                color: $primary-color;
+            }
+        }
+    }
+}

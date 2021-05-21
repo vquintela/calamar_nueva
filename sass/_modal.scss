@@ -1,0 +1,63 @@
+//modal
+.mascara {
+    display: none; 
+    position: fixed; 
+    z-index: 50000; 
+    left: 0;
+    top: 0;
+    width: 100vw; 
+    height: 100vh; 
+    background-color: rgba(0,0,0,0.8); 
+    .contenido {
+        border-radius: 10px;
+        animation: modal 1s;
+        position: fixed;
+        top: 15vh;
+        left: 10vw;
+        right: 10vw;
+        margin: auto;
+        font-family: 'futura';
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: auto;
+        max-width: 450px;
+        .modal-title {
+            display: flex;
+            align-items: center;
+            h3 {
+                padding-left: 10px;
+            }
+            img {
+                max-width: 10%;
+            }
+        }
+        .modal-body {
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .modal-footer {
+            h3 {
+                text-align: center;
+            }
+        }
+        button {
+            display: flex;
+            margin-left: auto;
+            font-family: 'futura';
+            padding: 8px 35px;
+            background-color: $primary-color;
+            color: $sec-color;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+    @keyframes modal {
+        0% {
+            transform: translateY(-150%);
+        }
+    }
+}

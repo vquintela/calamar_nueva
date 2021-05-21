@@ -120,12 +120,21 @@ const modalEd = () => {
     mascara.style.display = "block";
 }
 
+// SECCCION DE SERVICIOS
+document.querySelectorAll('.col').forEach(element => {
+    element.addEventListener('click', (e) => {
+        console.log('0');
+    });
+});
+
 // GALERIA
 document.getElementById('gal').addEventListener('click', e => {
     if(!e.target.classList.contains('imgAct') && e.target.classList.contains('sec')) {
         document.querySelector('.imgAct').classList.remove('imgAct')
         e.target.classList.add('imgAct');
-        document.getElementById('imgActual').src = e.target.src;
+        const img = document.getElementById('imgActual');
+        // img.classList.add('imgActual');
+        img.src = e.target.src;
     }
 })
 
@@ -133,7 +142,7 @@ document.getElementById('gal').addEventListener('click', e => {
 const servicios = document.getElementById('servicios');
 const col = document.querySelectorAll('.col');
 ScrollReveal().reveal(servicios, {
-    delay: 500,
+    delay: 200,
     duration: 1000,
     easing: 'ease-in',
     reset: true

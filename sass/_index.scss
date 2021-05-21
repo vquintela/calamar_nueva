@@ -1,0 +1,280 @@
+.contenedor {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    .img-back {
+        position: relative;
+        img {
+            position: absolute;
+            opacity: 0.2;
+            width: 80%;
+            top: -300px;
+            left: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+// Encabezado
+.masthead {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    .logo-inicio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        background-color: $primary-color;
+        animation: girar 5s;
+        .inicio-borde {
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 85%;
+            height: 85%;
+            background-color: $sec-color;
+            .inicio-centro {
+                border-radius: 50%;
+                width: 85%;
+                height: 85%;
+                background-color: $primary-color;
+            }
+        }
+        @keyframes girar {
+            0% {
+                transform: scale(2) translateX(70%);
+            }
+            20% {
+                transform: scale(2) translateX(70%);
+            }
+            50% {
+                transform: scale(1) translate(150%);
+            }
+            100% {
+                transform: scale(1) translate(0);
+            }
+        }
+    }
+    .texto {
+        font-family: 'rock';
+        margin-left: 15px;
+        animation: initext 6s;
+        h1, p {
+            margin: 0;
+            text-align: center;
+            font-size: 2rem;
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 0.6rem;
+        }
+        @keyframes initext {
+            0% {
+                opacity: 0;
+            }
+            60% {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+//servicios y trabajos
+.title-servicios {
+    font-family: "rock";
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    h1 {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+}
+
+.title-servicios::after,
+.title-servicios::before {
+    content: '~';
+    margin: 0 30px;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.column-servicios,
+.img-trabajos {
+    z-index: 100;
+    font-family: "futura";
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    text-align: center;
+}
+
+.column-servicios {
+    .col {
+        position: relative;
+        .front, .back {
+            border-radius: 50px;
+            box-shadow: -2px 5px 15px -5px #000000;
+            backface-visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+            transform: rotateY(0deg);
+            transition: all 0.3s linear;
+            position: relative;
+            overflow: hidden;
+            .fondo {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(5px);
+                z-index: -1;
+            }
+            img {
+                position: absolute;
+                z-index: -2;
+                opacity: 0.5;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 6rem;
+                margin: 50px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+        .back {
+            transition: all 0.3s linear;
+            transform: rotateY(180deg);
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            h1 {
+                text-align: center;
+            }
+        }
+    }
+    .col:hover {
+        cursor: pointer;
+        .front {
+            transform: rotateY(180deg);
+            
+        }
+        .back {
+            transform: rotateY(360deg);
+        }
+    }
+}
+
+.img-trabajos {
+    .col-img {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+        .img-col {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 0.5s;
+            img {
+                max-width: 100%;
+            }
+        }
+        .text-col {
+            position: absolute;
+            width: 90%;
+            z-index: 10;
+            transform: translateY(-110%);
+            transition: transform 0.5s;
+            a {
+                text-decoration: none;
+                padding: 8px 35px;
+                background-color: $primary-color;
+                color: $sec-color;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    .col-img:hover {
+        .text-col {
+            transform: translateY(0);
+        }
+        .img-col {
+            opacity: 0.3;
+        }
+    }
+}
+
+@media screen and (max-width:850px){
+    .column-servicios,
+    .img-trabajos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:650px){
+    .masthead {
+        .logo-inicio {
+            width: 80px;
+            height: 80px;
+        }
+        .texto {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .column-servicios,
+    .img-trabajos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:450px){
+    .title-servicios {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .title-servicios::after,
+    .title-servicios::before {
+        font-size: 3rem;
+    }
+}
