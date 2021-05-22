@@ -765,10 +765,23 @@ footer .contacto form span {
   width: 100%;
   height: 100%;
   z-index: 10;
+  margin: auto;
 }
 
 .column-servicios .col .back h1 {
   text-align: center;
+}
+
+.column-servicios .col .back p {
+  margin-bottom: 30px;
+}
+
+.column-servicios .col .back a {
+  color: black;
+  background-color: white;
+  padding: 10px 35px;
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 .column-servicios .col:hover {
