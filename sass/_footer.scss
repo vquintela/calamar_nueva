@@ -15,7 +15,7 @@ footer {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             .nav-logo {
                 width: 20%;
                 margin-top: 20px;
@@ -39,33 +39,55 @@ footer {
                 }
             }
         }
+        .navegacion-link {
+            font-family: 'futura';
+            text-align: center;
+            margin: 0;
+            margin-bottom: 50px;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
     }
     .redes {
+        width: 80%;
+        margin: 0 auto;
         .title-redes {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-transform: uppercase;
             color: $sec-color;
             font-family: 'rock';
             letter-spacing: 0.15em;
+            h3 {
+                margin: 0;
+            }
         }
         .title-redes::after,
         .title-redes::before {
             content: '~';
-            font-size: 2rem;
             margin: 0 10px;
         }
         .icon-redes {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             a {
                 text-decoration: none;
                 color: $sec-color;
                 i {
-                    font-size: 2rem;
-                    padding: 5px 15px;
+                    font-size: 1.5rem;
+                    padding: 5px 25px 0 0;
                 }
+            }
+        }
+        .contacto-redes {
+            font-family: 'futura';
+            color: white;
+            margin-bottom: 50px;
+            i {
+                padding-right: 15px;
             }
         }
     }
@@ -73,17 +95,19 @@ footer {
         width: 80%;
         .text-contacto {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             text-transform: uppercase;
             font-family: 'rock';
             color: $sec-color;
             letter-spacing: 0.15em;
+            h3 {
+                margin: 0;
+            }
         }
         .text-contacto::before,
         .text-contacto::after {
             content: '~';
-            font-size: 2rem;
             margin: 0 10px;
         }
         form {
@@ -115,7 +139,7 @@ footer {
     }
 }
 
-@media screen and (max-width:650px){
+@media screen and (max-width:750px){
     footer {
         grid-template-columns: repeat(1, 1fr);
         gap: 0;
