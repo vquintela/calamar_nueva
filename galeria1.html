@@ -36,6 +36,41 @@
             </div>
         </div>
     </div>
+    <!-- Ventana Modal Email -->
+    <div id="modal-contacto" class="mascara">
+        <div class="contenido">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <img src="img/calamar-logo.png" alt="lg">
+                    <h3>~ Consulta ~</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-form">
+                            <input type="text" id="nombre" placeholder="   Nombre">
+                            <span id="errorNombre"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="number" id="celular" placeholder="   Celular">
+                            <span id="errorTelefono"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="email" id="correo" placeholder="   Correo">
+                            <span id="errorEmail"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="textarea" id="mensaje" placeholder="    Mensaje">
+                            <span id="errorComentario"></span>
+                        </div>
+                        <button type="submit" id="consulta">Consultar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <h3>~ Calamar En Su Tinta ~</h3>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Fin ventana modal -->
     <nav>
         <div class="menu-btn" id="btn-menu">
@@ -121,7 +156,7 @@
         </div>
         <div class="redes">
             <div class="title-redes">
-                <h1>redes</h1>
+                <h3>redes</h3>
             </div>
             <div class="icon-redes">
                 <a href="https://www.facebook.com/CalamarEnSuTintaAr" target="_blank">
@@ -134,27 +169,18 @@
         </div>
         <div class="contacto">
             <div class="text-contacto">
-                <h1>contacto</h1>
+                <h3>contacto</h3>
             </div>
-            <form action="">
-                <div class="input-form">
-                    <input type="text" id="nombre" placeholder="    Nombre">
-                    <span id="errorNombre"></span>
-                </div>
-                <div class="input-form">
-                    <input type="number" id="celular" placeholder="    Celular">
-                    <span id="errorTelefono"></span>
-                </div>
-                <div class="input-form">
-                    <input type="email" id="correo" placeholder="    Correo">
-                    <span id="errorEmail"></span>
-                </div>
-                <div class="input-form">
-                    <input type="textarea" id="mensaje" placeholder="    Mensaje">
-                    <span id="errorComentario"></span>
-                </div>
-                <button type="submit" id="consulta">Consultar</button>
-            </form>
+            <div class="contacto-redes">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    116286-6910
+                </p>
+                <a href="#" id="btn-contacto">
+                    <i class="fas fa-envelope"></i>
+                    calamar-logo@gmail.com
+                </a>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>

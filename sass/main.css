@@ -215,8 +215,8 @@ footer {
       grid-template-columns: repeat(3, 1fr);
   gap: 50px;
   width: 100%;
-  margin-top: 50px;
   background-color: black;
+  margin-top: 30px;
   padding: 30px 0;
 }
 
@@ -244,12 +244,11 @@ footer .navegacion .nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 footer .navegacion .nav .nav-logo {
   width: 20%;
-  margin-top: 20px;
 }
 
 footer .navegacion .nav .nav-logo img {
@@ -274,18 +273,6 @@ footer .navegacion .nav .texto p {
   text-align: center;
 }
 
-footer .navegacion .navegacion-link {
-  font-family: 'futura';
-  text-align: center;
-  margin: 0;
-  margin-bottom: 50px;
-}
-
-footer .navegacion .navegacion-link a {
-  color: white;
-  text-decoration: none;
-}
-
 footer .redes {
   width: 80%;
   margin: 0 auto;
@@ -295,9 +282,9 @@ footer .redes .title-redes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -321,9 +308,9 @@ footer .redes .icon-redes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer .redes .icon-redes a {
@@ -334,16 +321,6 @@ footer .redes .icon-redes a {
 footer .redes .icon-redes a i {
   font-size: 1.5rem;
   padding: 5px 25px 0 0;
-}
-
-footer .redes .contacto-redes {
-  font-family: 'futura';
-  color: white;
-  margin-bottom: 50px;
-}
-
-footer .redes .contacto-redes i {
-  padding-right: 15px;
 }
 
 footer .contacto {
@@ -376,34 +353,16 @@ footer .contacto .text-contacto::after {
   margin: 0 10px;
 }
 
-footer .contacto form .input-form {
-  margin: 15px 0;
+footer .contacto .contacto-redes p, footer .contacto .contacto-redes a {
+  font-family: 'futura';
+  color: white;
+  margin-bottom: 50px;
+  text-decoration: none;
+  margin: 8px;
 }
 
-footer .contacto form .input-form input {
-  font-family: 'futura';
-  width: 100%;
-  padding: 8px 0;
-  border-radius: 6px;
-  border: none;
-}
-
-footer .contacto form button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  font-family: 'futura';
-  padding: 8px 35px;
-  background-color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-footer .contacto form span {
-  color: red;
-  font-family: 'futura';
+footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 750px) {
@@ -412,21 +371,23 @@ footer .contacto form span {
         grid-template-columns: repeat(1, 1fr);
     gap: 0;
   }
-  footer .navegacion {
-    margin-top: 30px;
-  }
   footer .navegacion .nav {
     margin-bottom: 20px;
   }
   footer .redes {
-    margin-bottom: 40px;
+    margin: 40px auto;
   }
   footer .contacto {
     margin-left: auto;
     margin-right: auto;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .contacto .text-contacto {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -995,6 +956,36 @@ footer .contacto form span {
   cursor: pointer;
 }
 
+.mascara .contenido form .input-form {
+  margin: 15px 0;
+}
+
+.mascara .contenido form .input-form input {
+  font-family: 'futura';
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.mascara .contenido form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  font-family: 'futura';
+  padding: 8px 35px;
+  background-color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.mascara .contenido form span {
+  color: red;
+  font-family: 'futura';
+}
+
 @-webkit-keyframes modal {
   0% {
     -webkit-transform: translateY(-150%);
@@ -1006,119 +997,6 @@ footer .contacto form span {
   0% {
     -webkit-transform: translateY(-150%);
             transform: translateY(-150%);
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .menu-btn {
-    display: block;
-  }
-  .menu-btn:hover {
-    opacity: 0.5;
-  }
-  nav {
-    display: block;
-    text-align: start;
-  }
-  nav .link {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    display: block;
-    width: 50%;
-    height: 100vh;
-    margin-left: 0;
-    padding-top: 2px;
-    border-right: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.9);
-    -webkit-transform: translateX(-110%);
-            transform: translateX(-110%);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-  }
-  nav .link-item {
-    width: 70%;
-    display: block;
-    margin: 20px 50px;
-    border-bottom: 1px solid black;
-  }
-  nav .link-item a {
-    display: block;
-    padding-bottom: 20px;
-  }
-  nav .link-item::before,
-  nav .link-item::after {
-    display: none;
-  }
-  nav .show {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  .column-servicios,
-  .img-trabajos {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .masthead .logo-inicio {
-    width: 80px;
-    height: 80px;
-  }
-  .masthead .texto h1 {
-    font-size: 2rem;
-  }
-  .masthead .texto p {
-    font-size: 1.2rem;
-  }
-  .column-servicios,
-  .img-trabajos {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-  footer {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    gap: 0;
-  }
-  footer .navegacion {
-    margin-top: 50px;
-  }
-  footer .contacto {
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  nav .menu-btn {
-    top: 20px;
-  }
-  nav .nav-logo {
-    margin-left: 5px;
-    width: 80px;
-  }
-  nav .texto h1 {
-    font-size: 1.5rem;
-  }
-  nav .texto p {
-    font-size: 0.8rem;
-  }
-  nav .link-item {
-    margin-left: 10px;
-  }
-  .title-servicios h1 {
-    font-size: 2rem;
-  }
-  .title-servicios::after,
-  .title-servicios::before {
-    font-size: 3rem;
   }
 }
 

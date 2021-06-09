@@ -19,7 +19,7 @@
     <img class="img-fondo" src="img/calamar-logo.png" alt="logo">
     <img class="img-fondo2" src="img/calamar-logo.png" alt="logo">
     <img class="img-fondo3" src="img/calamar-logo.png" alt="logo">
-    <!-- Ventana Modal Email -->
+    <!-- Ventana confirmacion Modal Email -->
     <div id="lamascara" class="mascara">
         <div class="contenido">
             <div class="modal-content">
@@ -36,6 +36,41 @@
                     <h3>~ Calamar En Su Tinta ~</h3>
                     <hr>
                     <button type="button" class="btn btn-primary" id="aceptarEditarButton">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ventana Modal Email -->
+    <div id="modal-contacto" class="mascara">
+        <div class="contenido">
+            <div class="modal-content">
+                <div class="modal-title">
+                    <img src="img/calamar-logo.png" alt="lg">
+                    <h3>~ Consulta ~</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="input-form">
+                            <input type="text" id="nombre" placeholder="   Nombre">
+                            <span id="errorNombre"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="number" id="celular" placeholder="   Celular">
+                            <span id="errorTelefono"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="email" id="correo" placeholder="   Correo">
+                            <span id="errorEmail"></span>
+                        </div>
+                        <div class="input-form">
+                            <input type="textarea" id="mensaje" placeholder="    Mensaje">
+                            <span id="errorComentario"></span>
+                        </div>
+                        <button type="submit" id="consulta">Consultar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <h3>~ Calamar En Su Tinta ~</h3>
                 </div>
             </div>
         </div>
@@ -274,6 +309,7 @@
             </div>
         </div>
     </div>
+    <!-- FOOTER -->
     <footer>
         <div class="navegacion">
             <div class="nav">
@@ -285,26 +321,8 @@
                     <p>~ en su tinta ~</p>
                 </div>
             </div>
-            <div class="navegacion-link">
-                <a href="#">Inicio  | </a>
-                <a href="#">Servicios  | </a>
-                <a href="#">Trabajos</a>
-            </div>
         </div>
         <div class="redes">
-            <div class="title-redes">
-                <h3>comunicate</h3>
-            </div>
-            <div class="contacto-redes">
-                <p>
-                    <i class="fas fa-phone"></i>
-                    116286-6910
-                </p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    calamar-logo@gmail.com
-                </p>
-            </div>
             <div class="title-redes">
                 <h3>redes</h3>
             </div>
@@ -321,25 +339,16 @@
             <div class="text-contacto">
                 <h3>contacto</h3>
             </div>
-            <form action="">
-                <div class="input-form">
-                    <input type="text" id="nombre" placeholder="   Nombre">
-                    <span id="errorNombre"></span>
-                </div>
-                <div class="input-form">
-                    <input type="number" id="celular" placeholder="   Celular">
-                    <span id="errorTelefono"></span>
-                </div>
-                <div class="input-form">
-                    <input type="email" id="correo" placeholder="   Correo">
-                    <span id="errorEmail"></span>
-                </div>
-                <div class="input-form">
-                    <input type="textarea" id="mensaje" placeholder="    Mensaje">
-                    <span id="errorComentario"></span>
-                </div>
-                <button type="submit" id="consulta">Consultar</button>
-            </form>
+            <div class="contacto-redes">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    116286-6910
+                </p>
+                <a href="#" id="btn-contacto">
+                    <i class="fas fa-envelope"></i>
+                    calamar-logo@gmail.com
+                </a>
+            </div>
         </div>
     </footer>
     <script src="js/script.js"></script>

@@ -33,6 +33,10 @@ window.onload = () => {
 };
 
 // LOGICA FORM CONTACTO
+document.querySelector('#btn-contacto').addEventListener('click', () => {
+    document.getElementById('modal-contacto').style.display = "block";
+});
+
 document.getElementById('consulta').addEventListener('click', e => {
     e.preventDefault()
     const nombre = document.getElementById('nombre').value;
@@ -116,6 +120,7 @@ document.getElementById('consulta').addEventListener('click', e => {
 })
 
 const modalEd = () => {
+    document.getElementById('modal-contacto').style.display = "none";
     let mascara = document.getElementById('lamascara');
     mascara.style.display = "block";
 }
