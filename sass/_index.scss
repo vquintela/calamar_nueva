@@ -169,7 +169,7 @@
             }
         }
         .back {
-            transition: all 0.3s linear;
+            transition: all 0.4s linear;
             transform: rotateY(180deg);
             background-color: black;
             color: white;
@@ -177,26 +177,55 @@
             height: 100%;
             z-index: 10;
             margin: auto;
-            h1 {
-                text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .back-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 1.5rem;
+                    margin-right: 10px;
+                }
             }
-            p {
-                margin-bottom: 30px;
+            .back-body {
+                width: 90%;
+                margin: 0 auto;  
+                p {
+                    text-align: left;
+                }
             }
-            a {
-                color: black;
-                background-color: white;
-                padding: 10px 35px;
-                border-radius: 20px;
-                text-decoration: none;
+            .back-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 15px;
+                p {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+                a {
+                    padding: 5px 25px;
+                    border-radius: 20px;
+                    text-decoration: none;
+                    border: 1px solid white;
+                    background-color: black;
+                    color: white;
+                    &:hover {
+                        color: black;
+                        background-color: white;
+                    }
+                }
             }
         }
     }
     .col:hover {
-        cursor: pointer;
         .front {
-            transform: rotateY(180deg);
-            
+            transform: rotateY(180deg);         
         }
         .back {
             transform: rotateY(360deg);

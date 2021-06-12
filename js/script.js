@@ -150,11 +150,9 @@ ScrollReveal().reveal(servicios, {
     delay: 200,
     duration: 1000,
     easing: 'ease-in',
-    reset: true
 });
 ScrollReveal().reveal(col, {
     delay: 500,
     duration: 500,
     easing: 'ease-in',
-    reset: true
 });

@@ -750,8 +750,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 }
 
 .column-servicios .col .back {
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   background-color: black;
@@ -760,26 +760,77 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   height: 100%;
   z-index: 10;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.column-servicios .col .back h1 {
-  text-align: center;
+.column-servicios .col .back .back-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.column-servicios .col .back p {
-  margin-bottom: 30px;
+.column-servicios .col .back .back-title i {
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
 
-.column-servicios .col .back a {
-  color: black;
-  background-color: white;
-  padding: 10px 35px;
+.column-servicios .col .back .back-body {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.column-servicios .col .back .back-body p {
+  text-align: left;
+}
+
+.column-servicios .col .back .back-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.column-servicios .col .back .back-footer p {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.column-servicios .col .back .back-footer a {
+  padding: 5px 25px;
   border-radius: 20px;
   text-decoration: none;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
 }
 
-.column-servicios .col:hover {
-  cursor: pointer;
+.column-servicios .col .back .back-footer a:hover {
+  color: black;
+  background-color: white;
 }
 
 .column-servicios .col:hover .front {
