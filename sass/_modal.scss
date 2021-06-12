@@ -43,6 +43,18 @@
                 text-align: center;
             }
         }
+        .cerrar {
+            color: #aaaaaa;
+            margin-left: auto;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .cerrar:hover,
+        .cerrar:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
         button {
             display: flex;
             margin-left: auto;

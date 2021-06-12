@@ -33,8 +33,14 @@ window.onload = () => {
 };
 
 // LOGICA FORM CONTACTO
-document.querySelector('#btn-contacto').addEventListener('click', () => {
-    document.getElementById('modal-contacto').style.display = "block";
+document.querySelectorAll('.btn-contacto').forEach(element => {
+    element.addEventListener('click', () => {
+        const modal = document.getElementById('modal-contacto');
+        modal.style.display = "block";
+        document.getElementById('cerrarRegistro').addEventListener('click', () => {
+            modal.style.display = "none";
+        });
+    });
 });
 
 document.getElementById('consulta').addEventListener('click', e => {

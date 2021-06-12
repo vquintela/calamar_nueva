@@ -993,6 +993,20 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   text-align: center;
 }
 
+.mascara .contenido .cerrar {
+  color: #aaaaaa;
+  margin-left: auto;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.mascara .contenido .cerrar:hover,
+.mascara .contenido .cerrar:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .mascara .contenido button {
   display: -webkit-box;
   display: -ms-flexbox;
