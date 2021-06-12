@@ -188,6 +188,10 @@
                     font-size: 1.5rem;
                     margin-right: 10px;
                 }
+                h1 {
+                    margin: 0;
+                    margin-top: 10px;
+                }
             }
             .back-body {
                 width: 90%;
@@ -250,6 +254,7 @@
             transition: opacity 0.5s;
             img {
                 max-width: 100%;
+                filter: grayscale(100%);
             }
         }
         .text-col {

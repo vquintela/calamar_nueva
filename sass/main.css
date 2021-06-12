@@ -789,6 +789,11 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   margin-right: 10px;
 }
 
+.column-servicios .col .back .back-title h1 {
+  margin: 0;
+  margin-top: 10px;
+}
+
 .column-servicios .col .back .back-body {
   width: 90%;
   margin: 0 auto;
@@ -870,6 +875,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 
 .img-trabajos .col-img .img-col img {
   max-width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .img-trabajos .col-img .text-col {
