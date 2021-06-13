@@ -213,11 +213,10 @@ footer {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
   width: 100%;
   background-color: black;
+  padding: 15px 0;
   margin-top: 30px;
-  padding: 30px 0;
 }
 
 footer .navegacion {
@@ -274,8 +273,8 @@ footer .navegacion .nav .texto p {
 }
 
 footer .redes {
-  width: 80%;
-  margin: 0 auto;
+  width: 50%;
+  margin: auto;
 }
 
 footer .redes .title-redes {
@@ -308,9 +307,9 @@ footer .redes .icon-redes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 footer .redes .icon-redes a {
@@ -320,11 +319,11 @@ footer .redes .icon-redes a {
 
 footer .redes .icon-redes a i {
   font-size: 1.5rem;
-  padding: 5px 25px 0 0;
 }
 
 footer .contacto {
-  width: 80%;
+  width: 50%;
+  margin: auto;
 }
 
 footer .contacto .text-contacto {
