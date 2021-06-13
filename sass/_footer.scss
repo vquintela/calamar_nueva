@@ -61,12 +61,13 @@ footer {
         }
         .icon-redes {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             a {
                 text-decoration: none;
                 color: $sec-color;
                 i {
                     font-size: 1.5rem;
+                    padding: 0 8px;
                 }
             }
         }
