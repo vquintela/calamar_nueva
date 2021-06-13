@@ -65,11 +65,15 @@
             border: none;
             border-radius: 20px;
             cursor: pointer;
+            transition: background-color 1s;
+            &:hover {
+                background-color: gray;
+            }
         }
         form {
             .input-form {
                 margin: 15px 0;
-                input {
+                input, textarea {
                     font-family: 'futura';
                     width: 100%;
                     padding: 8px 0;

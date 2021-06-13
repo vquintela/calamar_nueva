@@ -831,6 +831,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   border: 1px solid white;
   background-color: black;
   color: white;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
 }
 
 .column-servicios .col .back .back-footer a:hover {
@@ -896,9 +898,16 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   padding: 8px 35px;
   background-color: black;
   color: white;
-  border: none;
+  border: 1px solid black;
   border-radius: 20px;
   cursor: pointer;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.img-trabajos .col-img .text-col a:hover {
+  color: black;
+  background-color: white;
 }
 
 .img-trabajos .col-img:hover .text-col {
@@ -1026,13 +1035,19 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+.mascara .contenido button:hover {
+  background-color: gray;
 }
 
 .mascara .contenido form .input-form {
   margin: 15px 0;
 }
 
-.mascara .contenido form .input-form input {
+.mascara .contenido form .input-form input, .mascara .contenido form .input-form textarea {
   font-family: 'futura';
   width: 100%;
   padding: 8px 0;
