@@ -169,16 +169,20 @@ addEventListener('load', () => {
     for (const oferta of ofertas) {
         oferta.addEventListener('animationend', (e) => {
             oferta.style.visibility = 'hidden';
-            oferta.classList.remove('slideAnimado');
+            oferta.querySelector('.oferta-text').classList.remove('slideAnimado');
+            oferta.querySelector('.oferta-img img').classList.remove('imgAnim');
             if(oferta.nextElementSibling) {
                 oferta.nextElementSibling.style.visibility = "visible";
-                oferta.nextElementSibling.classList.add('slideAnimado')
+                oferta.nextElementSibling.querySelector('.oferta-text').classList.add('slideAnimado');
+                oferta.nextElementSibling.querySelector('.oferta-img img').classList.add('imgAnim');
             } else {
                 ofertas[0].style.visibility = "visible";
-                ofertas[0].classList.add('slideAnimado')
+                ofertas[0].querySelector('.oferta-text').classList.add('slideAnimado');
+                ofertas[0].querySelector('.oferta-img img').classList.add('imgAnim');
             }
         })
     }
     ofertas[0].style.visibility = "visible";
-    ofertas[0].classList.add('slideAnimado')
+    ofertas[0].querySelector('.oferta-text').classList.add('slideAnimado');
+    ofertas[0].querySelector('.oferta-img img').classList.add('imgAnim');
 });

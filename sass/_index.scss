@@ -307,14 +307,14 @@
             max-width: 350px;
             perspective: 1500px;
             img {
-                transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg);
+                transform:  translateX(150%);
                 box-shadow: 2px 10px 30px hsla(0, 0%, 0%, 0.25);
                 transition: .3s;
                 max-width: 100%;
             }
-            &:hover img {
-                transform: rotate(0);
-            }
+            // &:hover img {
+                
+            // }
         }
         .oferta-text {
             margin: auto;
@@ -329,6 +329,20 @@
             }
         }
     }
+    .imgAnim {
+        z-index: 100;
+        animation-name: imganimate;
+        animation-duration: 8s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes imganimate {
+        10%, 90% {
+            transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
+        }
+        100% {
+            transform: translateX(150%);
+        }
+    }
     .slideAnimado {
         z-index: 100;
         animation-name: ofert;
@@ -336,7 +350,13 @@
         animation-fill-mode: forwards;
     }
     @keyframes ofert {
-        0%, 90% {
+        0% {
+            opacity: 0;
+        }
+        10% {
+             opacity: 1;
+         }
+        90% {
             opacity: 1;
         }
         100% {

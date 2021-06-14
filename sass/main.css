@@ -945,18 +945,13 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 }
 
 .ofertas .oferta .oferta-img img {
-  -webkit-transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg);
-          transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg);
+  -webkit-transform: translateX(150%);
+          transform: translateX(150%);
   -webkit-box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.25);
   -webkit-transition: .3s;
   transition: .3s;
   max-width: 100%;
-}
-
-.ofertas .oferta .oferta-img:hover img {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
 }
 
 .ofertas .oferta .oferta-text {
@@ -973,6 +968,38 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
   margin: 0;
 }
 
+.ofertas .imgAnim {
+  z-index: 100;
+  -webkit-animation-name: imganimate;
+          animation-name: imganimate;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes imganimate {
+  10%, 90% {
+    -webkit-transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
+            transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+}
+
+@keyframes imganimate {
+  10%, 90% {
+    -webkit-transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
+            transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+}
+
 .ofertas .slideAnimado {
   z-index: 100;
   -webkit-animation-name: ofert;
@@ -984,7 +1011,13 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 }
 
 @-webkit-keyframes ofert {
-  0%, 90% {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {
@@ -993,7 +1026,13 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 }
 
 @keyframes ofert {
-  0%, 90% {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
     opacity: 1;
   }
   100% {
