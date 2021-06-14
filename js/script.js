@@ -162,3 +162,23 @@ ScrollReveal().reveal(col, {
     duration: 500,
     easing: 'ease-in',
 });
+
+// OFERTAS SLIDER
+addEventListener('load', () => {
+    const ofertas = document.querySelectorAll('.oferta');
+    for (const oferta of ofertas) {
+        oferta.addEventListener('animationend', (e) => {
+            oferta.style.visibility = 'hidden';
+            oferta.classList.remove('slideAnimado');
+            if(oferta.nextElementSibling) {
+                oferta.nextElementSibling.style.visibility = "visible";
+                oferta.nextElementSibling.classList.add('slideAnimado')
+            } else {
+                ofertas[0].style.visibility = "visible";
+                ofertas[0].classList.add('slideAnimado')
+            }
+        })
+    }
+    ofertas[0].style.visibility = "visible";
+    ofertas[0].classList.add('slideAnimado')
+});
