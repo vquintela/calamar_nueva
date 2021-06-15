@@ -921,8 +921,9 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 
 .ofertas {
   position: relative;
-  width: 100%;
+  width: 70%;
   height: 25em;
+  margin: 0 auto;
 }
 
 .ofertas .oferta {
@@ -945,8 +946,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
 }
 
 .ofertas .oferta .oferta-img img {
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  -webkit-transform: translateX(250%);
+          transform: translateX(250%);
   -webkit-box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.25);
           box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.25);
   -webkit-transition: .3s;
@@ -984,8 +985,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
             transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
   }
   100% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(250%);
+            transform: translateX(250%);
   }
 }
 
@@ -995,8 +996,8 @@ footer .contacto .contacto-redes p i, footer .contacto .contacto-redes a i {
             transform: rotateX(10deg) rotateY(-19deg) rotateZ(3deg) translateX(0);
   }
   100% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(250%);
+            transform: translateX(250%);
   }
 }
 
